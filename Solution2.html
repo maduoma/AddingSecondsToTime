@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<script>
+    let nb1 = Number(prompt("Enter nb1:"));
+    let nb2 = Number(prompt("Enter nb2:"));
+    let nb3 = Number(prompt("Enter nb3:"));
+
+    if (nb1 > nb2) {
+        nb1 = nb3 * 2;
+    } else {
+        nb1++;
+        if (nb2 > nb3) {
+            nb1 += nb3 * 3;
+        } else {
+            nb1 = 0;
+            nb3 = nb3 * 2 + nb2;
+        }
+    }
+    console.log(nb1, nb2, nb3);
+</script>
+</body>
+</html>
