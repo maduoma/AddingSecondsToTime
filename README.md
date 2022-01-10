@@ -13,3 +13,7 @@ In a second, time will be 14 hours, 18 minutes, and 0 seconds.
 # Problem statement 2
 Assuming the final values of variables nb1, nb2 and nb3 depending on following initial values: nb1 = 4, nb2 = 4, nb3 = 4.
 What will be the respective values in console.log(nb1, nb2, nb3);?
+
+# Problem statement 3
+Assuming the final values of variables nb1, nb2 and nb3 depending on following initial values: nb1 = 2, nb2 = 4, nb3 = 0.
+What will be the respective values in console.log(nb1, nb2, nb3);?
