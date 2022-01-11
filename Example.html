@@ -30,7 +30,7 @@
     console.log(`The final price is ${finalPrice}`);
 
 
-    // Write - Your - Code
+    // Temperature conversion from Celsius to Fahrenheit
     const tempCel = Number(prompt("Enter a temperature in Celsius degrees:"));
     const tempFar = tempCel * 9 / 5 + 32;
     console.log(`${tempCel}°C = ${tempFar}°F`);
@@ -56,58 +56,65 @@
     }
 
     //
-    const number = Number(prompt("Enter a number:"));
-    if (number > 0) {
-        console.log(`${number} is positive`);
+    const num = Number(prompt("Enter a number:"));
+    if (num > 0) {
+        console.log(`${num} is positive`);
     } else {
         // number <= 0
-        if (number < 0) {
-            console.log(`${number} is negative`);
+        if (num < 0) {
+            console.log(`${num} is negative`);
         } else {
             // number === 0
-            console.log(`${number} is zero`);
+            console.log(`${num} is zero`);
         }
     }
     //
-    const number = Number(prompt("Enter a number:"));
-    if (number > 0) {
-        console.log(`${number} is positive`);
-    } else if (number < 0) {
-        console.log(`${number} is negative`);
+    const num1 = Number(prompt("Enter a number:"));
+    if (num1 > 0) {
+        console.log(`${num1} is positive`);
+    } else if (num1 < 0) {
+        console.log(`${num1} is negative`);
     } else {
-        console.log(`${number} is zero`);
-    }
-    // And Operator
-    let number = 4;
-
-    if ((number >= 0) && (number <= 100)) {
-        console.log(`${number} is between 0 and 100, both included`);
+        console.log(`${num1} is zero`);
     }
 
-    //Truth table
+    /*============================
+        “And” operator
+    ============================*/
+    let number3 = 4;
+    if ((number3 >= 0) && (number3 <= 100)) {
+        console.log(`${number3} is between 0 and 100, both included`);
+    }
+
+    //Truth table of the && operator
     console.log(true && true);   // true
     console.log(true && false);  // false
     console.log(false && true);  // false
     console.log(false && false); // false
 
-    // Or Operator
-    const number = -1;
 
-    if ((number < 0) || (number > 100)) {
-        console.log(`${number} is not in between 0 and 100`);
+    /*============================
+         “Or” operator
+     ============================*/
+    const number4 = -1;
+    if ((number4 < 0) || (number4 > 100)) {
+        console.log(`${number4} is not in between 0 and 100`);
     }
-    // Truth Table
+    // The Truth Table of the || operator
     console.log(true || true);   // true
     console.log(true || false);  // true
     console.log(false || true);  // true
     console.log(false || false); // false
-    // “Not” operator#
-    const number = 60;
 
+
+    /*============================
+       “Not” operator
+     ============================*/
+    const number = 60;
     if (!(number > 100)) {
         console.log(`${number} is less than or equal to 100`);
     }
-    //Here’s the truth table of the ! operator.
+    //Here’s the truth table of the "!" operator.
     console.log(!true);  // false
     console.log(!false); // true
 
@@ -121,20 +128,20 @@
      */
 
     //The if/else statement#
-    const weather = prompt("What's the weather like?");
-    if (weather === "sunny") {
+    const weather1 = prompt("What's the weather like?");
+    if (weather1 === "sunny") {
         console.log("T-shirt time!");
-    } else if (weather === "windy") {
+    } else if (weather1 === "windy") {
         console.log("Windbreaker life.");
-    } else if (weather === "rainy") {
+    } else if (weather1 === "rainy") {
         console.log("Bring that umbrella!");
-    } else if (weather === "snowy") {
+    } else if (weather1 === "snowy") {
         console.log("Just stay inside!");
     } else {
         console.log("Not a valid weather type");
     }
 
-    //The switch statement#
+    //The switch statement alternative version
     const weather = prompt("What's the weather like?");
     switch (weather) {
         case "sunny":
