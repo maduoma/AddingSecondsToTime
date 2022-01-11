@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<script>
+    //Coding Challenge: Following Day
+    const day = prompt("Enter a day of the week:");
+
+    // Solution using an if
+    if (day === "monday" || day === "Monday") {
+        console.log("Tomorrow is Tuesday");
+    } else if (day === "tuesday" || day === "Tuesday") {
+        console.log("Tomorrow is Wednesday");
+    } else if (day === "wednesday" || day === "Wednesday") {
+        console.log("Tomorrow is Thursday");
+    } else if (day === "thursday" || day === "Thursday") {
+        console.log("Tomorrow is Friday");
+    } else if (day === "friday" || day === "Friday") {
+        console.log("Tomorrow is Saturday");
+    } else if (day === "saturday" || day === "Saturday") {
+        console.log("Tomorrow is Sunday");
+    } else if (day === "sunday" || day === "Sunday") {
+        console.log("Tomorrow is Monday");
+    } else {
+        console.log("Unrecognized day!");
+    }
+
+    // Alternative solution using a switch
+    switch (day) {
+        case "monday":
+            console.log("Tomorrow is tuesday");
+            break;
+        case "tuesday":
+            console.log("Tomorrow is wednesday");
+            break;
+        case "wednesday":
+            console.log("Tomorrow is thursday");
+            break;
+        case "thursday":
+            console.log("Tomorrow is friday");
+            break;
+        case "friday":
+            console.log("Tomorrow is saturday");
+            break;
+        case "saturday":
+            console.log("Tomorrow is sunday");
+            break;
+        case "sunday":
+            console.log("Tomorrow is monday");
+            break;
+        default:
+            console.log("Unrecognized day!");
+    }
+</script>
+</body>
+</html>

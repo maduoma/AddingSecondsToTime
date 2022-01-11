@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<script>
+    const h = "5";
+    console.log(h + 1); // Concatenation: show the string "51"
+    const i = Number("5");
+    console.log(i + 1); // Numerical addition: show the number 6
+
+    const temp1 = 36.9;
+    const temp2 = 37.6;
+    const temp3 = 37.1;
+    console.log(temp1, temp2, temp3); // Show "36.9 37.6 37.1"
+
+    const input = prompt("Enter a number:"); // input's type is string
+    const nb = Number(input); // nb's type is number
+    console.log(nb);
+
+    const rawPrice = Number(prompt("Enter the raw price:"));
+    // VAT rate = 20.6%
+    const vatRate = 20.6 / 100;
+    const finalPrice = rawPrice * (1 + vatRate);
+    console.log(`The final price is ${finalPrice}`);
+
+
+    // Write - Your - Code
+    const tempCel = Number(prompt("Enter a temperature in Celsius degrees:"));
+    const tempFar = tempCel * 9 / 5 + 32;
+    console.log(`${tempCel}°C = ${tempFar}°F`);
+
+
+    //Coding Challenge: Variable Swapping
+    let number1 = 5;
+    let number2 = 3;
+    let temp = number1;
+    number1 = number2;
+    number2 = temp;
+    console.log(number1); // Should show 3
+    console.log(number2); // Should show 5
+
+    //
+    if (true) {
+        // The condition for this if is always true
+        // This block of code will always be executed
+    }
+    if (false) {
+        // The condition for this if is always false
+        // This block of code will never be executed
+    }
+
+    //
+    const number = Number(prompt("Enter a number:"));
+    if (number > 0) {
+        console.log(`${number} is positive`);
+    } else {
+        // number <= 0
+        if (number < 0) {
+            console.log(`${number} is negative`);
+        } else {
+            // number === 0
+            console.log(`${number} is zero`);
+        }
+    }
+    //
+    const number = Number(prompt("Enter a number:"));
+    if (number > 0) {
+        console.log(`${number} is positive`);
+    } else if (number < 0) {
+        console.log(`${number} is negative`);
+    } else {
+        console.log(`${number} is zero`);
+    }
+    // And Operator
+    let number = 4;
+
+    if ((number >= 0) && (number <= 100)) {
+        console.log(`${number} is between 0 and 100, both included`);
+    }
+
+    //Truth table
+    console.log(true && true);   // true
+    console.log(true && false);  // false
+    console.log(false && true);  // false
+    console.log(false && false); // false
+
+    // Or Operator
+    const number = -1;
+
+    if ((number < 0) || (number > 100)) {
+        console.log(`${number} is not in between 0 and 100`);
+    }
+    // Truth Table
+    console.log(true || true);   // true
+    console.log(true || false);  // true
+    console.log(false || true);  // true
+    console.log(false || false); // false
+    // “Not” operator#
+    const number = 60;
+
+    if (!(number > 100)) {
+        console.log(`${number} is less than or equal to 100`);
+    }
+    //Here’s the truth table of the ! operator.
+    console.log(!true);  // false
+    console.log(!false); // true
+
+    /*
+    There are some more logical operators in addition to the above. e.g., &&=, ||=, and ??= etc.
+    Let’s discuss one of them, which is the logical nullish assignment ??= operator. In the below expression, y assigns to x only if x is null or undefined.
+
+    x ??= y
+
+    Try to do the rest of them yourself and enjoy.
+     */
+
+    //The if/else statement#
+    const weather = prompt("What's the weather like?");
+    if (weather === "sunny") {
+        console.log("T-shirt time!");
+    } else if (weather === "windy") {
+        console.log("Windbreaker life.");
+    } else if (weather === "rainy") {
+        console.log("Bring that umbrella!");
+    } else if (weather === "snowy") {
+        console.log("Just stay inside!");
+    } else {
+        console.log("Not a valid weather type");
+    }
+
+    //The switch statement#
+    const weather = prompt("What's the weather like?");
+    switch (weather) {
+        case "sunny":
+            console.log("T-shirt time!");
+            break;
+        case "windy":
+            console.log("Windbreaker life.");
+            break;
+        case "rainy":
+            console.log("Bring that umbrella!");
+            break;
+        case "snowy":
+            console.log("Winter is coming! Just stay inside!");
+            break;
+        default:
+            console.log("Not a valid weather type");
+    }
+
+
+</script>
+</body>
+</html>
