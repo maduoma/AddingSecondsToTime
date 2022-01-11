@@ -19,7 +19,8 @@ Assuming the final values of variables nb1, nb2 and nb3 depending on following i
 What will be the respective values in console.log(nb1, nb2, nb3);?
 
 # Problem statement 4
-Write a program that accepts a day name from the user in the variable, then shows the name of the following day. Incorrect inputs must be taken into account.
+Write a program that accepts a day name from the user in the variable, then shows the name of the following day. 
+Incorrect inputs must be taken into account.
 
 # Input
 Enter day: Monday
@@ -38,7 +39,8 @@ Enter second number: 3
 5 is greater than 3
 
 # Problem statement 6 // Number of Days in a Month
-Write a program that accepts a month number (between 11 and 1212), then show the number of days of that month. Leap years are excluded. Incorrect inputs must be taken into account.
+Write a program that accepts a month number (between 11 and 1212), then show the number of days of that month. 
+Leap years are excluded. Incorrect inputs must be taken into account.
 
 # Input
 Enter month number: 4
