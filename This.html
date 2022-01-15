@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>The this keyword</title>
+</head>
+<body>
+<script>
+    'use strict';
+    /*
+    The value of this depends on how a function is called. In the example above, the function was called as a method of our Object.
+     */
+    const myCar1 = {
+        color: 'red',
+        logColor: function () {
+            console.log(this.color)
+        }
+    }
+    myCar1.logColor();
+
+    /*
+    What about bellow function output?
+     */
+    function logThis() {
+        console.log(this);
+    }
+
+    logThis(); // Output: Window {...}
+
+    /*
+    Note:
+    To see the expected output of the code above, please run it in the Console of your Browser.
+    We called this function in the global context, therefore the value of this referred to the Window Object.
+    We can avoid accidentally referring to the Window Object by turning on strict mode.
+    You can do that by writing 'use strict'; at the beginning of your JavaScript file.
+    By doing so you will enable a stricter set of rules for JavaScript, among which there’s one that sets the value of the Global Object to undefined instead of to the Window Object. This causes our this keyword to also become undefined.
+
+    Note: If we want to manually set the value of this to something we can use .bind.
+     */
+    // How to use .bind()
+    const myCar2 = {
+        color: 'red',
+        logColor: function () {
+            console.log(this.color)
+        }
+    }
+    const unboundGetColor = myCar2.logColor;
+    console.log(unboundGetColor()) // undefined
+
+    const boundGetColor = unboundGetColor().bind(myCar2)
+    console.log(boundGetColor)
+
+    /*
+    There are two other methods we can use to set the value of the 'this' keyword: .call() and .apply().
+     They are both similar in that both methods call a function with a given this value. The arguments they accept are a bit different.
+    .call() accepts a list of arguments while .apply() accepts a single array of arguments.
+    Look at this example using .call()
+     */
+
+    //How to use .call()
+    function Car(make, color) {
+        this.carMake = make;
+        this.carColor = color;
+    }
+
+    function MyCar(make, color) {
+        Car.call(this, make, color);
+        this.age = 5;
+        console.log(this);  // Output: MyCar { carMake: 'bmw', carColor: 'red', age: 5 }
+    }
+
+    const myNewCar = new MyCar('bmw', 'red');
+    console.log(myNewCar.carMake); // Output: bmw
+    console.log(myNewCar.carColor); // Output: red
+
+    //How to use .apply()
+    function Car2(make, color) {
+        this.carMake = make;
+        this.carColor = color;
+    }
+
+    function MyCar2(make, color) {
+        Car.apply(this, [make, color]);
+        this.age = 5;
+        console.log(this); //Output:  MyCar { carMake: 'bmw', carColor: 'red', age: 5 }
+    }
+
+    const myNewCar2 = new MyCar2('bmw', 'red')
+    console.log(myNewCar2.carMake) //Output: bmw
+    console.log(myNewCar2.carColor) //Output: red
+
+    /*
+    Note:
+    The major difference between the two comes into play when you are writing a function that does not need to know, or doesn’t know the number of arguments required. In that case, since .call() requires you to pass the arguments individually, it becomes problematic to do. The solution is to use .apply(), because you can just pass the array and it will get unpacked inside of the function, no matter how many arguments it contains.
+     */
+
+    const ourFunction = function (item, method, args) {
+        method.apply(item, args);
+    }
+    ourFunction(item, method, ['argument1', 'argument2'])
+    ourFunction(item, method, ['argument1', 'argument2', 'argument3'])
+
+</script>
+</body>
+</html>

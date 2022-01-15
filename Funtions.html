@@ -10,21 +10,29 @@
 </head>
 <body>
 <script>
+    'use strict';
     // Function Definition
-    function greeter(name1){
-        console.log(`Hello, ${name1}`);
+    function greeter(name) {
+        console.log(`Hello, ${name}`);
     }
+
     greeter("Mr. John!")
 
     // Function Expression
-    const greetings = function greeter(name2){
-        console.log(`Hello, ${name2}`);
+    const greetings = function greeter(name) {
+        console.log(`Hello, ${name}`);
     }
     greetings("Engr. Madu!");
 
-    // Arrow Function Version 1
-    const greet = (name3) => {
-        console.log(`Hello, ${name3}`);
+    // With a function expression, we can also create anonymous functions - A function without a name.
+    const hello = function (name) {
+        console.log(`Hello, ${name}`);
+    }
+    hello("Ify");
+
+    //ES2015: We can tweak the above anonymous function to get an Arrow Function Version 1 as shown below
+    const greet = (name) => {
+        console.log(`Hello, ${name}`);
     }
     greet("young man!");
 
@@ -33,9 +41,15 @@
         console.log(`Hello, ${name4}`);
     }
     greet2("Ethan!");
+
     // Arrow Function Version 3: Can be simplified further to omit the return keyword
     const greet3 = name5 => console.log(`Hello, ${name5}`);
-    greet3("Brian!")
+    greet3("Brian!");
+
+    // A function can also be called immediately after declaration to execute with ();
+    (function greetMe(name) {
+        console.log(`Hello, ${name}`);
+    })("Madu!");
 </script>
 </body>
 </html>
