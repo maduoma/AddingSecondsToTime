@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+</head>
+<body>
+<script>
+    // Function Definition
+    function greeter(name1){
+        console.log(`Hello, ${name1}`);
+    }
+    greeter("Mr. John!")
+
+    // Function Expression
+    const greetings = function greeter(name2){
+        console.log(`Hello, ${name2}`);
+    }
+    greetings("Engr. Madu!");
+
+    // Arrow Function Version 1
+    const greet = (name3) => {
+        console.log(`Hello, ${name3}`);
+    }
+    greet("young man!");
+
+    // Arrow Function Version 2: Can be simplified further when there's only one argument
+    const greet2 = name4 => {
+        console.log(`Hello, ${name4}`);
+    }
+    greet2("Ethan!");
+    // Arrow Function Version 3: Can be simplified further to omit the return keyword
+    const greet3 = name5 => console.log(`Hello, ${name5}`);
+    greet3("Brian!")
+</script>
+</body>
+</html>
